@@ -1,0 +1,6 @@
+.DS_Store
+bower_components
+Desktop.ini
+node_modules
+npm-debug.log
+Thumbs.db
