@@ -1,0 +1,28 @@
+{
+  "author": {
+    "email": "gibatronic@gmail.com",
+    "name": "Gibran Malheiros",
+    "url": "http://gibatronic.github.io/"
+  },
+  "bugs": {
+    "email": "gibatronic@gmail.com",
+    "url": "https://github.com/gibatronic/itinerary/issues"
+  },
+  "dependencies": {},
+  "description": "simple library to queue delayed callbacks",
+  "devDependencies": {},
+  "homepage": "https://github.com/gibatronic/itinerary",
+  "keywords": [
+    "callback",
+    "delay",
+    "queue"
+  ],
+  "license": "MIT",
+  "name": "itinerary",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gibatronic/itinerary.git"
+  },
+  "scripts": {},
+  "version": "0.0.0"
+}
