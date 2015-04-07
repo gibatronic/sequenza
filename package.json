@@ -8,7 +8,6 @@
     "email": "gibatronic@gmail.com",
     "url": "https://github.com/gibatronic/sequenza/issues"
   },
-  "dependencies": {},
   "description": "simple library to queue delayed callbacks",
   "devDependencies": {
     "jasmine": "^2.2.1"
