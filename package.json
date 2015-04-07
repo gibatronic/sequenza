@@ -25,6 +25,8 @@
     "type": "git",
     "url": "https://github.com/gibatronic/itinerary.git"
   },
-  "scripts": {},
+  "scripts": {
+    "test": "node_modules/jasmine/bin/jasmine.js JASMINE_CONFIG_PATH=jasmine.json"
+  },
   "version": "0.0.0"
 }
