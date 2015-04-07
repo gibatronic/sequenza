@@ -10,7 +10,9 @@
   },
   "dependencies": {},
   "description": "simple library to queue delayed callbacks",
-  "devDependencies": {},
+  "devDependencies": {
+    "jasmine": "^2.2.1"
+  },
   "homepage": "https://github.com/gibatronic/itinerary",
   "keywords": [
     "callback",
