@@ -6,24 +6,24 @@
   },
   "bugs": {
     "email": "gibatronic@gmail.com",
-    "url": "https://github.com/gibatronic/itinerary/issues"
+    "url": "https://github.com/gibatronic/sequenza/issues"
   },
   "dependencies": {},
   "description": "simple library to queue delayed callbacks",
   "devDependencies": {
     "jasmine": "^2.2.1"
   },
-  "homepage": "https://github.com/gibatronic/itinerary",
+  "homepage": "https://github.com/gibatronic/sequenza",
   "keywords": [
     "callback",
     "delay",
     "queue"
   ],
   "license": "MIT",
-  "name": "itinerary",
+  "name": "sequenza",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gibatronic/itinerary.git"
+    "url": "https://github.com/gibatronic/sequenza.git"
   },
   "scripts": {
     "test": "node_modules/jasmine/bin/jasmine.js JASMINE_CONFIG_PATH=jasmine.json"
