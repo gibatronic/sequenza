@@ -73,3 +73,5 @@ sequenza.queue({
 
 sequenza.start();
 ```
+
+the above snippet will take ≈ 1 second to log `#1`, ≈ 2 seconds to log `#2` and ≈ 3 seconds to log `#3`
