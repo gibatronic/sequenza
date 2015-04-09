@@ -148,4 +148,17 @@ describe('sequenza', function() {
       expect(callback.calls.count()).toBe(3);
     });
   });
+
+  it('should allow method chaining', function() {
+    var requestAnimationFrame = jasmine.createSpy('requestAnimationFrame');
+
+    Sequenza.__with__({
+      requestAnimationFrame: requestAnimationFrame
+    })(function() {
+      var sequenza = new Sequenza();
+
+      expect(sequenza.queue(step)).toBe(sequenza);
+      expect(sequenza.start()).toBe(sequenza);
+    });
+  });
 });
