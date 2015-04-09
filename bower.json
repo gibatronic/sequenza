@@ -1,0 +1,33 @@
+{
+  "authors": [
+    "Gibran Malheiros <gibatronic@gmail.com>"
+  ],
+  "description": "micro library to queue delayed callbacks",
+  "homepage": "https://github.com/gibatronic/sequenza",
+  "ignore": [
+    ".gitignore",
+    ".travis.yml",
+    "jasmine.json",
+    "package.json",
+    "README.md",
+    "test"
+  ],
+  "keywords": [
+    "callback",
+    "delay",
+    "queue"
+  ],
+  "license": "MIT",
+  "main": "lib/sequenza.js",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "name": "sequenza",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gibatronic/sequenza.git"
+  },
+  "version": "0.0.1"
+}

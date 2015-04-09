@@ -3,6 +3,8 @@
 micro library to queue delayed callbacks.
 
 ```sh
+bower install sequenza
+# or
 npm install sequenza
 ```
 
