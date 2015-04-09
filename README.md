@@ -1,9 +1,75 @@
 # sequenza
 
-simple library to queue delayed callbacks.
+micro library to queue delayed callbacks.
 
-**why?**
+```sh
+npm install sequenza
+```
 
-current alternatives solve too many problems, some rely on `setTimeout`, others are too verbose or complex to use.
+## usage
 
-sequenza just takes your callbacks with the desired delay between them to work, it uses `requestAnimationFrame` so when a callback is called it's going to be the perfect moment to deal with the DOM.
+choose between these three different ways:
+
+```js
+new Sequenza(step1, step2, ...stepN).start();
+```
+
+```js
+var steps = [step1, step2, ...stepN];
+
+new Sequenza(steps).start();
+```
+
+```js
+var sequenza = new Sequenza()
+
+sequenza.queue(step1);
+sequenza.queue(step2);
+sequenza.queue(stepN);
+
+sequenza.start();
+```
+
+a **step** should be an object containing *at least* one of these properties:
+
+```js
+{
+  callback: Function,
+  delay: Number
+}
+```
+
+## example
+
+```js
+// create an instance
+
+var sequenza = new Sequenza();
+
+// queue some steps
+
+sequenza.queue({
+  callback: function() {
+    console.log('#1');
+  },
+  delay: 1000
+});
+
+sequenza.queue({
+  callback: function() {
+    console.log('#2');
+  },
+  delay: 1000
+});
+
+sequenza.queue({
+  callback: function() {
+    console.log('#3');
+  },
+  delay: 1000
+});
+
+// start it
+
+sequenza.start();
+```
