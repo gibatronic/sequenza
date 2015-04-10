@@ -149,6 +149,57 @@ describe('sequenza', function() {
     });
   });
 
+  it('should repeat the number of times specified by the iteration option', function() {
+    var callback = jasmine.createSpy('callback');
+    var requestAnimationFrameCallback;
+    var time = 0;
+
+    var now = function() {
+      return time;
+    };
+
+    var requestAnimationFrame = function(callback) {
+      time += 1000;
+      requestAnimationFrameCallback = callback;
+    };
+
+    Sequenza.__with__({
+      Date: {
+        now: now
+      },
+      requestAnimationFrame: requestAnimationFrame
+    })(function() {
+      new Sequenza({
+        callback: callback,
+        delay: 1000
+      }, {
+        callback: callback,
+        delay: 1000
+      }, {
+        callback: callback,
+        delay: 1000
+      }).start({
+        iterations: 2
+      });
+
+      requestAnimationFrameCallback();
+      expect(callback.calls.count()).toBe(1);
+      requestAnimationFrameCallback();
+      expect(callback.calls.count()).toBe(2);
+      requestAnimationFrameCallback();
+      expect(callback.calls.count()).toBe(3);
+      requestAnimationFrameCallback();
+      requestAnimationFrameCallback();
+      expect(callback.calls.count()).toBe(4);
+      requestAnimationFrameCallback();
+      expect(callback.calls.count()).toBe(5);
+      requestAnimationFrameCallback();
+      expect(callback.calls.count()).toBe(6);
+      requestAnimationFrameCallback();
+      expect(callback.calls.count()).toBe(6);
+    });
+  });
+
   it('should allow method chaining', function() {
     var requestAnimationFrame = jasmine.createSpy('requestAnimationFrame');
 
