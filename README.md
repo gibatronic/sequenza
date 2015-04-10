@@ -1,4 +1,4 @@
-# sequenza
+![sequenza](http://gibatronic.github.io/sequenza/etc/sequenza.svg)
 
 micro library to queue delayed callbacks.
 
