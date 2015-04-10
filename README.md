@@ -13,13 +13,13 @@ npm install sequenza
 choose between these three different ways:
 
 ```js
-new Sequenza(step1, step2, ...stepN).start();
+new Sequenza(step1, step2, ...stepN).start(options);
 ```
 
 ```js
 var steps = [step1, step2, ...stepN];
 
-new Sequenza(steps).start();
+new Sequenza(steps).start(options);
 ```
 
 ```js
@@ -29,10 +29,10 @@ sequenza.queue(step1);
 sequenza.queue(step2);
 sequenza.queue(stepN);
 
-sequenza.start();
+sequenza.start(options);
 ```
 
-a **step** should be an object containing *at least* one of these properties:
+the `queue` method expects a **step** object that must contain *at least* one of these properties:
 
 ```js
 {
@@ -40,6 +40,10 @@ a **step** should be an object containing *at least* one of these properties:
   delay: Number
 }
 ```
+
+you may pass an **options** object to the `start` method, these are the available options:
+
+* `iterations` the number of times the sequence should be iterated, defaults to 1. to iterate forever, just assign `Infinity` to it.
 
 ## example
 
@@ -73,7 +77,9 @@ sequenza.queue({
 
 // start it
 
-sequenza.start();
+sequenza.start({
+  iterations: 3
+});
 ```
 
-the above snippet will take ≈ 1 second to log `#1`, ≈ 2 seconds to log `#2` and ≈ 3 seconds to log `#3`
+the above snippet will take ≈ 1 second to log `#1`, ≈ 2 for `#2` and ≈ 3 for `#3`, then it's going to repeat 2 more times.
