@@ -20,6 +20,7 @@
     "queue"
   ],
   "license": "MIT",
+  "main": "lib/sequenza.js",
   "name": "sequenza",
   "repository": {
     "type": "git",
