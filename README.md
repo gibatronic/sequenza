@@ -89,3 +89,20 @@ sequenza.start({
 ```
 
 the above snippet will take ≈ 1 second to log `#1`, ≈ 2 for `#2` and ≈ 3 for `#3`, then it's going to repeat 2 more times.
+
+you may also use Sequenza as a clock, to call a function between certain amount of time:
+
+```js
+var ticks = 0;
+
+var tick = function() {
+  console.log(++ticks % 2 ? 'tick' : 'tack');
+};
+
+new Sequenza({
+  callback: tick,
+  delay: 1000
+}).start({
+  iterations: Infinity
+});
+```
