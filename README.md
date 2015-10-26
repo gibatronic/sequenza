@@ -10,7 +10,7 @@ npm install sequenza
 
 it uses `requestAnimationFrame` with a fallback for `setInterval`.
 
-you may use it in the browser and with Node / io.js.
+you may use it in the browser and with Node.
 
 it supports AMD, CommonJS and the old regular `window`
 
