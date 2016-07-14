@@ -92,6 +92,16 @@ describe('sequenza', function() {
     expect(sequenza.steps[0].delay).toBe(0);
   });
 
+  it('should accept a delay as a step', function() {
+    var callback = function() { };
+    var sequenza = new Sequenza();
+
+    sequenza.queue(1000);
+
+    expect(isFunction(sequenza.steps[0].callback)).toBeTruthy();
+    expect(sequenza.steps[0].delay).toBe(1000);
+  });
+
   it('should start using requestAnimationFrame when available', function() {
     var requestAnimationFrame = jasmine.createSpy('requestAnimationFrame');
     var setInterval = jasmine.createSpy('setInterval');
