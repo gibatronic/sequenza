@@ -10,8 +10,8 @@
   },
   "description": "micro library to queue delayed callbacks",
   "devDependencies": {
-    "jasmine": "^2.2.1",
-    "rewire": "^2.3.1"
+    "jasmine": "^2.4.1",
+    "rewire": "^2.5.2"
   },
   "homepage": "https://github.com/gibatronic/sequenza",
   "keywords": [
