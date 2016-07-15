@@ -92,6 +92,18 @@ describe('sequenza', function() {
     expect(sequenza.steps[0].delay).toBe(0);
   });
 
+  it('should accept an array of callback as a step', function() {
+    var callbackA = function() { };
+    var callbackB = function() { };
+    var callbacks = [callbackA, callbackB];
+    var sequenza = new Sequenza();
+
+    sequenza.queue(callbacks);
+
+    expect(sequenza.steps[0].callback).toBe(callbacks);
+    expect(sequenza.steps[0].delay).toBe(0);
+  });
+
   it('should accept a delay as a step', function() {
     var callback = function() { };
     var sequenza = new Sequenza();
