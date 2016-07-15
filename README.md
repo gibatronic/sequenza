@@ -1,6 +1,6 @@
 ![sequenza](http://gibatronic.github.io/sequenza/etc/sequenza.svg)
 
-micro library to queue delayed callbacks.
+Micro library to queue delayed callbacks.
 
 ```sh
 bower install sequenza
@@ -8,15 +8,13 @@ bower install sequenza
 npm install sequenza
 ```
 
-it uses `requestAnimationFrame` with a fallback for `setInterval`.
+It uses `requestAnimationFrame` with a fallback for `setInterval`.
 
-you may use it in the browser and with Node.
+You may use it in the browser and with Node, under [AMD](https://github.com/amdjs/amdjs-api/blob/master/AMD.md), [CommonJS](http://wiki.commonjs.org/wiki/Modules/1.1.1) or as a regular script.
 
-it supports AMD, CommonJS and the old regular `window`
+## Usage
 
-## usage
-
-choose between these three different ways:
+Choose between three different ways to instantiate:
 
 ```js
 new Sequenza(step1, step2, ...stepN).start(options);
@@ -38,7 +36,7 @@ sequenza.queue(stepN);
 sequenza.start(options);
 ```
 
-the `queue` method expects a **step** object that must contain *at least* one of these properties:
+A **step** may be an object that contains *at least* one of these properties:
 
 ```js
 {
@@ -47,11 +45,13 @@ the `queue` method expects a **step** object that must contain *at least* one of
 }
 ```
 
-you may pass an **options** object to the `start` method, these are the available options:
+But you may also pass a callback or a delay directly as a step.
+
+Also, you may pass an **options** object to the `start` method, these are the available options:
 
 * `iterations` the number of times the sequence should be iterated, defaults to 1. to iterate forever, just assign `Infinity` to it.
 
-## example
+## Example
 
 ```js
 // create an instance
@@ -88,9 +88,9 @@ sequenza.start({
 });
 ```
 
-the above snippet will take ≈ 1 second to log `#1`, ≈ 2 for `#2` and ≈ 3 for `#3`, then it's going to repeat 2 more times.
+The above snippet will take ≈ 1 second to log each number, then it's going to repeat 2 more times.
 
-you may also use Sequenza as a clock, to call a function between certain amount of time:
+You may also use Sequenza as a clock, to call a function between certain amount of time:
 
 ```js
 var ticks = 0;
