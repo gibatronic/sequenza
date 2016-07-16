@@ -2,6 +2,8 @@
 
 Micro library to queue delayed callbacks.
 
+[![Build Status](https://travis-ci.org/gibatronic/sequenza.svg?branch=master)](https://travis-ci.org/gibatronic/sequenza) [![Gitter](https://badges.gitter.im/gibatronic/sequenza.svg)](https://gitter.im/gibatronic/sequenza?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 ```sh
 bower install sequenza
 # or
